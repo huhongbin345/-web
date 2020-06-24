@@ -1,0 +1,69 @@
+html {
+	font-size: 100px;
+	font-family: "Microsolf YaHei", sans-serif;
+	text-align: center;
+}
+
+
+.path-group {
+	fill: none;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-dasharray: 2080;
+	stroke-dashoffset: 2080;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+	animation-direction: alternate;
+}
+
+.path-group-1 {
+	stroke: #00ff00;
+	stroke-width: 5px;
+	animation-name: strokeText1;
+}
+
+.path-group-2 {
+	stroke: #ff0000;
+	stroke-width: 10px;
+	animation-name: strokeText2;
+}
+
+.path-group-3 {
+	stroke: #0000ff;
+	stroke-width: 15px;
+	animation-name: strokeText3;
+}
+
+@keyframes strokeText1 {
+	10% {
+		stroke-dashoffset: 2080;
+	}
+
+	40%,
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes strokeText2 {
+	20% {
+		stroke-dashoffset: 2080;
+	}
+
+	70%,
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes strokeText3 {
+	30% {
+		stroke-dashoffset: 2080;
+	}
+
+	to {
+		stroke-dashoffset: 0;
+	}
+}

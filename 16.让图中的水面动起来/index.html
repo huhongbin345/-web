@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>16</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<div id="container">
+			<img id="lake1" src="lake.jpg">
+			<img id="lake" src="lake.jpg">
+		</div>
+		<!-- <div id="numrangebox">num-octaves<input id="numrange" type="range" max='10' min='0' onchange="numchange()"/></div>
+		<div id="seedrangebox">seed<input id="seedrange" type="range" max='10' min='0' onchange="seedchange()"/></div> -->
+		<svg version="1.1">
+			<filter id="turbulence" filterUnits="objectBoundingBox" x="0" y="34%" width="100%" height="66%">
+				<feTurbulence id="feturbulence" type="fractalNoise" numOctaves="3" seed="2"></feTurbulence>
+				<feDisplacementMap xChannelSelector="G" yChannelSelector="B" scale="20" in="SourceGraphic"></feDisplacementMap>
+			</filter>
+		</svg>
+		<script src="https://wow.techbrood.com/libs/jquery/jquery-1.11.1.min.js"></script>
+		<script src="https://wow.techbrood.com/libs/gsap/TweenMax.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

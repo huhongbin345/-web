@@ -1,0 +1,100 @@
+html,
+body,
+h1,
+p,
+div,
+a,
+ul,
+ol,
+input {
+	margin: 0px;
+	padding: 0px;
+}
+
+ul,
+ol {
+	list-style-type: none;
+}
+
+html {
+	font-size: 100px;
+	font-family: "Microsoft YaHei", sans-serif;
+	color: white;
+	text-align: center;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#container {
+	position: absolute;
+	width: 50%;
+	height: calc(50vw / 550 * 412);
+	box-shadow: 0 4px 20px #4f4f4f;
+}
+
+#lake1 {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+#lake {
+	position: absolute;
+	width: 100%;
+	-webkit-filter: url("#turbulence");
+	filter: url("#turbulence");
+	left: 0;
+	top: 0;
+}
+
+
+#codepen-link {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    height: 40px;
+    width: 40px;
+    z-index: 10;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-image: url("http://www.seanalexanderfree.com/codepen/avatar.jpg");
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.5;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
+#codepen-link:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 6px #0c0c0c;
+}
+
+#numrangebox {
+	position: absolute;
+	bottom: 0;
+	font-size: 2vw;
+	color: #000000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	left: 20vw;
+}
+#seedrangebox {
+	position: absolute;
+	bottom: 0;
+	font-size: 2vw;
+	color: #000000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	right: 20vw;
+}
