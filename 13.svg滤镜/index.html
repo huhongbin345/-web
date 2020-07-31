@@ -1,85 +1,112 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Blend</title>
+		<title></title>
+		<link rel="stylesheet" href="./swiper.min.css">
 		<link rel="stylesheet" href="./styles.css" />
 	</head>
 	<body>
 		<div class="page">
-			<svg width="100%" height="100%" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet">
-				<defs>
-					<filter id="BlendFilter-normal">
-						<feFlood x='30' y='100' width='200' height='75' id="flood1" result="floodFill" flood-color="green" flood-opacity="1" />
-						<feBlend in="SourceGraphic" in2="floodFill" mode="normal" />
-					</filter>
-					<filter id="BlendFilter-multiply">
-						<feFlood x='30' y='100' width='200' height='75' id="flood2" result="floodFill" flood-color="green" flood-opacity="1" />
-						<feBlend in="SourceGraphic" in2="floodFill" mode="multiply" />
-					</filter>
-					<filter id="BlendFilter-screen">
-						<feFlood x='30' y='100' width='200' height='75' id="flood3" result="floodFill" flood-color="green" flood-opacity="1" />
-						<feBlend in="SourceGraphic" in2="floodFill" mode="screen" />
-					</filter>
-					<filter id="BlendFilter-darken">
-						<feFlood x='30' y='100' width='200' height='75' id="flood4" result="floodFill" flood-color="green" flood-opacity="1" />
-						<feBlend in="SourceGraphic" in2="floodFill" mode="darken" />
-					</filter>
-					<filter id="BlendFilter-lighten">
-						<feFlood x='30' y='100' width='200' height='75' id="flood5" result="floodFill" flood-color="green" flood-opacity="1" />
-						<feBlend in="SourceGraphic" in2="floodFill" mode="lighten" />
-					</filter>
-					<filter id="GaussianBlur-normal">
-						<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
-						<feFlood x='30' y='100' width='200' height='75' id="flood1" result="floodFill" flood-color="green" flood-opacity="1" />
-						<feBlend in="blur" in2="floodFill" mode="normal" />
-					</filter>
-					<filter id="GaussianBlur-multiply">
-						<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
-						<feFlood x='30' y='100' width='200' height='75' id="flood1" result="floodFill" flood-color="green" flood-opacity="1" />
-						<feBlend in="blur" in2="floodFill" mode="multiply" />
-					</filter>
-					<filter id="GaussianBlur-screen">
-						<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
-						<feFlood x='30' y='100' width='200' height='75' id="flood1" result="floodFill" flood-color="green" flood-opacity="1" />
-						<feBlend in="blur" in2="floodFill" mode="screen" />
-					</filter>
-					<filter id="GaussianBlur-darken">
-						<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
-						<feFlood x='30' y='100' width='200' height='75' id="flood1" result="floodFill" flood-color="green" flood-opacity="1" />
-						<feBlend in="blur" in2="floodFill" mode="darken" />
-					</filter>
-					<filter id="GaussianBlur-lighten">
-						<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
-						<feFlood x='30' y='100' width='200' height='75' id="flood1" result="floodFill" flood-color="green" flood-opacity="1" />
-						<feBlend in="blur" in2="floodFill" mode="lighten" />
-					</filter>
-					<image id="imageTeacher" xlink:href="./test.jpg" x="30" y="0" width="200" height="200" preserveAspectRatio="xMidYMid meet" />
-				</defs>
-				<use xlink:href="#imageTeacher" transform="translate(0,0)" filter="url(#BlendFilter-normal)" />
-				<use xlink:href="#imageTeacher" transform="translate(240,0)" filter="url(#BlendFilter-multiply)" />
-				<use xlink:href="#imageTeacher" transform="translate(480,0)" filter="url(#BlendFilter-screen)" />
-				<use xlink:href="#imageTeacher" transform="translate(720,0)" filter="url(#BlendFilter-darken)" />
-				<use xlink:href="#imageTeacher" transform="translate(960,0)" filter="url(#BlendFilter-lighten)" />
-				<use xlink:href="#imageTeacher" transform="translate(0,170)" filter="url(#GaussianBlur-normal)" />
-				<use xlink:href="#imageTeacher" transform="translate(240,170)" filter="url(#GaussianBlur-multiply)" />
-				<use xlink:href="#imageTeacher" transform="translate(480,170)" filter="url(#GaussianBlur-screen)" />
-				<use xlink:href="#imageTeacher" transform="translate(720,170)" filter="url(#GaussianBlur-darken)" />
-				<use xlink:href="#imageTeacher" transform="translate(960,170)" filter="url(#GaussianBlur-lighten)" />
-			</svg>
-			<button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">
-				选择颜色
-			</button>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<svg width="100%" height="100%" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet">
+							<defs>
+								<filter id="BlendFilter-normal">
+									<feFlood x='30' y='100' width='200' height='75' id="flood1" result="floodFill" flood-color="green"
+									 flood-opacity="1" />
+									<feBlend in="SourceGraphic" in2="floodFill" mode="normal" />
+								</filter>
+								<!-- <filter id="BlendFilter-normal">
+									<feFlood x='30' y='100' width='200' height='75' id="flood1" result="floodFill" flood-color="green"
+									 flood-opacity="1" />
+									<feBlend in="SourceGraphic" in2="floodFill" mode="normal" />
+								</filter>
+								<filter id="BlendFilter-multiply">
+									<feFlood x='30' y='100' width='200' height='75' id="flood2" result="floodFill" flood-color="green"
+									 flood-opacity="1" />
+									<feBlend in="SourceGraphic" in2="floodFill" mode="multiply" />
+								</filter>
+								<filter id="BlendFilter-screen">
+									<feFlood x='30' y='100' width='200' height='75' id="flood3" result="floodFill" flood-color="green"
+									 flood-opacity="1" />
+									<feBlend in="SourceGraphic" in2="floodFill" mode="screen" />
+								</filter>
+								<filter id="BlendFilter-darken">
+									<feFlood x='30' y='100' width='200' height='75' id="flood4" result="floodFill" flood-color="green"
+									 flood-opacity="1" />
+									<feBlend in="SourceGraphic" in2="floodFill" mode="darken" />
+								</filter>
+								<filter id="BlendFilter-lighten">
+									<feFlood x='30' y='100' width='200' height='75' id="flood5" result="floodFill" flood-color="green"
+									 flood-opacity="1" />
+									<feBlend in="SourceGraphic" in2="floodFill" mode="lighten" />
+								</filter>
+								<filter id="GaussianBlur-normal">
+									<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+									<feFlood x='30' y='100' width='200' height='75' id="flood1" result="floodFill" flood-color="green"
+									 flood-opacity="1" />
+									<feBlend in="blur" in2="floodFill" mode="normal" />
+								</filter>
+								<filter id="GaussianBlur-multiply">
+									<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+									<feFlood x='30' y='100' width='200' height='75' id="flood1" result="floodFill" flood-color="green"
+									 flood-opacity="1" />
+									<feBlend in="blur" in2="floodFill" mode="multiply" />
+								</filter>
+								<filter id="GaussianBlur-screen">
+									<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+									<feFlood x='30' y='100' width='200' height='75' id="flood1" result="floodFill" flood-color="green"
+									 flood-opacity="1" />
+									<feBlend in="blur" in2="floodFill" mode="screen" />
+								</filter>
+								<filter id="GaussianBlur-darken">
+									<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+									<feFlood x='30' y='100' width='200' height='75' id="flood1" result="floodFill" flood-color="green"
+									 flood-opacity="1" />
+									<feBlend in="blur" in2="floodFill" mode="darken" />
+								</filter>
+								<filter id="GaussianBlur-lighten">
+									<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+									<feFlood x='30' y='100' width='200' height='75' id="flood1" result="floodFill" flood-color="green"
+									 flood-opacity="1" />
+									<feBlend in="blur" in2="floodFill" mode="lighten" />
+								</filter> -->
+								<image id="imageTeacher" xlink:href="./test.jpg" x="30" y="0" width="200" height="200" preserveAspectRatio="xMidYMid meet" />
+							</defs>
+							<!-- <use xlink:href="#imageTeacher" transform="translate(0,0)" filter="url(#BlendFilter-normal)" />
+							<use xlink:href="#imageTeacher" transform="translate(240,0)" filter="url(#BlendFilter-multiply)" />
+							<use xlink:href="#imageTeacher" transform="translate(480,0)" filter="url(#BlendFilter-screen)" />
+							<use xlink:href="#imageTeacher" transform="translate(720,0)" filter="url(#BlendFilter-darken)" />
+							<use xlink:href="#imageTeacher" transform="translate(960,0)" filter="url(#BlendFilter-lighten)" />
+							<use xlink:href="#imageTeacher" transform="translate(0,170)" filter="url(#GaussianBlur-normal)" />
+							<use xlink:href="#imageTeacher" transform="translate(240,170)" filter="url(#GaussianBlur-multiply)" />
+							<use xlink:href="#imageTeacher" transform="translate(480,170)" filter="url(#GaussianBlur-screen)" />
+							<use xlink:href="#imageTeacher" transform="translate(720,170)" filter="url(#GaussianBlur-darken)" />
+							<use xlink:href="#imageTeacher" transform="translate(960,170)" filter="url(#GaussianBlur-lighten)" /> -->
+						</svg>
+					</div>
+					<div class="swiper-slide">Slide 2</div>
+					<div class="swiper-slide">Slide 3</div>
+					<div class="swiper-slide">Slide 4</div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
 		</div>
 		<script src="jscolor.js"></script>
+		<script src="./swiper.min.js"></script>
+		<!-- Initialize Swiper -->
 		<script>
-			function setTextColor(picker) {
-				document.getElementById('flood1').setAttribute('flood-color', '#' + picker.toString());
-				document.getElementById('flood2').setAttribute('flood-color', '#' + picker.toString());
-				document.getElementById('flood3').setAttribute('flood-color', '#' + picker.toString());
-				document.getElementById('flood4').setAttribute('flood-color', '#' + picker.toString());
-				document.getElementById('flood5').setAttribute('flood-color', '#' + picker.toString());
-				// document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
-			}
+			var swiper = new Swiper('.swiper-container', {
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+					renderBullet: function(index, className) {
+						return '<span class="' + className + '">' + (index + 1) + '</span>';
+					},
+				},
+			});
 		</script>
 	</body>
 </html>

@@ -49,11 +49,52 @@ body {
 	transform-style: preserve-3d;
 }
 
+.cubebox-tran {
+	transition: all 0.5s ease-out;
+}
+
 #cube {
 	position: relative;
 	width: 16vw;
 	height: 16vw;
 	transform-style: preserve-3d;
+}
+
+#title {
+	position: absolute;
+	color: black;
+	top: 0;
+	margin: 0;
+}
+
+#no-btn1 {
+	position: absolute;
+	width: 20vw;
+	height: 20vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	left: 0;
+	bottom: 0;
+	background-color: black;
+	color: white;
+	font-size: 3vw;
+}
+
+#no-btn2 {
+	position: absolute;
+	width: 20vw;
+	height: 20vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	right: 0;
+	bottom: 0;
+	background-color: black;
+	color: white;
+	font-size: 3vw;
 }
 
 .jump {
@@ -107,7 +148,7 @@ body {
 	top: 0;
 	border-radius: 2vw;
 	background-color: #ccc;
-	transform: translateZ(0.001vw);
+	transform: translateZ(-0.001vw);
 }
 
 .faceback {
@@ -250,16 +291,7 @@ body {
 }
 
 #no {
-	position: absolute;
 	left: 0;
-	top: 0;
-	width: 10vw;
-	height: 3vh;
-}
-
-#btn1 {
-	position: absolute;
-	left: 11vw;
 	top: 0;
 	width: 10vw;
 	height: 3vh;

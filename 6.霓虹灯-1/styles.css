@@ -1,0 +1,183 @@
+@font-face {
+	font-family: Pacifico;
+	src: url(Pacifico.ttf);
+}
+
+html,
+body {
+	height: 100%
+}
+
+body {
+	background: #112 url(//images.weserv.nl/?url=i.imgur.com/6QJjYMe.jpg) center no-repeat;
+	background-size: cover;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.neon1 {
+	text-align: center;
+	width: 45vw;
+	height: 10vw;
+	user-select: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	box-shadow:
+		0 0 .5rem #fff,
+		inset 0 0 .5rem #fff,
+		0 0 2rem #49D038,
+		inset 0 0 2rem #49D038,
+		0 0 4rem #49D038,
+		inset 0 0 4rem #49D038;
+	animation: blink-border 1s ease-in-out infinite 1s;
+}
+
+.neon1 b {
+	font: 400 7vw "Pacifico";
+	color: #ff4444;
+	text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+
+.neon1 b span {
+	animation: blink1 linear infinite 2s;
+}
+
+.neon1 b span:nth-of-type(2) {
+	animation: blink1 linear infinite 3s;
+}
+
+@keyframes blink1 {
+	78% {
+		color: inherit;
+		text-shadow: inherit;
+	}
+
+	79% {
+		color: #333;
+	}
+
+	80% {
+		text-shadow: none;
+	}
+
+	81% {
+		color: inherit;
+		text-shadow: inherit;
+	}
+
+	82% {
+		color: #333;
+		text-shadow: none;
+	}
+
+	83% {
+		color: inherit;
+		text-shadow: inherit;
+	}
+
+	92% {
+		color: #333;
+		text-shadow: none;
+	}
+
+	92.5% {
+		color: inherit;
+		text-shadow: inherit;
+	}
+}
+
+@keyframes blink-border {
+	0%,10%,20%,30% {
+		box-shadow: 0 0 .5rem #fff,
+			inset 0 0 .5rem #fff,
+			0 0 2rem #49D038,
+			inset 0 0 2rem #49D038,
+			0 0 4rem #49D038,
+			inset 0 0 4rem #49D038;
+	}
+	5%,15%,25% {
+		box-shadow: 0 0 0.5rem #fff, 
+			inset 0 0 0.5rem #fff, 
+			0 0 1rem #49D038, 
+			inset 0 0 2rem #49D038, 
+			0 0 4rem #49D038, 
+			inset 0 0 3rem #49D038;
+	}
+}
+
+/* .neon2 {
+	text-align: center;
+	width: 45vw;
+	height: 10vw;
+	user-select: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	box-shadow:
+		0 0 .5rem #fff,
+		inset 0 0 .5rem #fff,
+		0 0 2rem #49D038,
+		inset 0 0 2rem #49D038,
+		0 0 4rem #49D038,
+		inset 0 0 4rem #49D038;
+}
+
+.neon2 b {
+	font: 400 7vw "Pacifico";
+	color: #000;
+	text-shadow: 0 0 5px #CCCCCC, 0 0 10px #CCCCCC, 0 0 15px #CCCCCC, 0 0 20px #095816, 0 0 25px #095816, 0 0 30px #095816, 0 0 50px #095816, 0 0 80px #095816, 0 0 100px #095816, 0 0 150px #095816;
+}
+
+.neon2 b span {
+	animation: blink2 linear infinite 2s;
+}
+
+.neon2 b span:nth-of-type(2) {
+	animation: blink2 linear infinite 3s;
+}
+
+@keyframes blink2 {
+	78% {
+		color: inherit;
+		text-shadow: inherit;
+	}
+
+	79% {
+		color: #333;
+	}
+
+	80% {
+		text-shadow: none;
+	}
+
+	81% {
+		color: inherit;
+		text-shadow: inherit;
+	}
+
+	82% {
+		color: #333;
+		text-shadow: none;
+	}
+
+	83% {
+		color: inherit;
+		text-shadow: inherit;
+	}
+
+	92% {
+		color: #333;
+		text-shadow: none;
+	}
+
+	92.5% {
+		color: inherit;
+		text-shadow: inherit;
+	}
+} */
