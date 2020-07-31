@@ -3,6 +3,7 @@ web前端特效，主要是对kong66的躁动web的一些项目，自己重写�
 
 1. [弹弹球](https://huhongbin345.github.io/-web/1.弹弹球/index.html)
 2. [旋转的骰子](https://huhongbin345.github.io/-web/2.旋转的骰子/index.html)
+6. [霓虹灯](https://huhongbin345.github.io/-web/6.霓虹灯-1/index.html)
 8. [svg镂空文本](https://huhongbin345.github.io/-web/8.svg镂空文本/index.html)
 9. [svg文字路径动画](https://huhongbin345.github.io/-web/9.svg文字路径动画-1/index.html)
 13. [svg滤镜](https://huhongbin345.github.io/-web/13.svg滤镜/index.html)
