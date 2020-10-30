@@ -1,0 +1,148 @@
+html,
+body,
+h1,
+p,
+div,
+a,
+ul,
+ol,
+input {
+	margin: 0px;
+	padding: 0px;
+}
+
+ul,
+ol {
+	list-style-type: none;
+}
+
+html {
+	font-size: 100px;
+	background-color: white;
+	font-family: "Microsoft YaHei", sans-serif;
+	color: white;
+	text-align: center;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.minifigure {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	perspective: 200px;
+	transform-style: preserve-3d;
+	transition: transform 400ms;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.minifigure.explode {
+	transform: scale(0.75) translateZ(0);
+}
+
+.head {
+	position: absolute;
+	z-index: 1;
+	width: 50vh;
+	height: 50vh;
+	color: hsla(50, 90%, 50%, 1);
+	background-color: currentColor;
+	background-image:
+		linear-gradient(rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0) 20%,
+		rgba(0, 0, 0, 0) 80%,
+		rgba(0, 0, 0, 0.15) 95%,
+		rgba(0, 0, 0, 0.3)),
+		linear-gradient(to right,
+		rgba(255, 255, 255, 0) 50%,
+		rgba(255, 255, 255, 0.2),
+		rgba(255, 255, 255, 0));
+	border-radius: 10vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.eyes {
+	position: absolute;
+	top: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.eye {
+	width: 60px;
+	height: 60px;
+	position: relative;
+	margin: 20px;
+	border-radius: 50%;
+}
+
+.eye::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	top: -10px;
+	left: -10px;
+	border: 10px solid #5F5B5A;
+}
+
+.rim {
+	width: 100%;
+	height: 100%;
+	background: white;
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.eyelid {
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 30%;
+	background: green;
+	transform-origin: top center;
+	transform: scaleY(0.1);
+	animation: blink .8s infinite;
+	animation-play-state: paused;
+}
+
+@keyframes blink {
+	50% {
+		transform: scaleY(1);
+	}
+}
+
+.ball {
+	width: 30%;
+	height: 30%;
+	background: black;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.mouth {
+	position: absolute;
+	bottom: 10vh;
+	width: 2vh;
+	height: 2vh;
+	background-color: firebrick;
+	border-radius: 2vh;
+}

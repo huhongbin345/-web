@@ -1,0 +1,67 @@
+html,
+body,
+h1,
+p,
+div,
+a,
+ul,
+ol,
+input {
+	margin: 0px;
+	padding: 0px;
+}
+
+ul,
+ol {
+	list-style-type: none;
+}
+
+html {
+	font-size: 100px;
+	background-color: white;
+	font-family: "Microsoft YaHei", sans-serif;
+	color: white;
+	text-align: center;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.fire {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	background-color: #000000;
+}
+
+.particle {
+	position: absolute;
+	width: 5vw;
+	height: 5vw;
+	top: 100vh;
+	background-image: radial-gradient(#ff5000 20%, rgba(255, 80, 0, 0) 40%);
+}
+
+.particle-ani {
+	animation: riseup 1s ease-in both;
+}
+
+@keyframes riseup {
+  from {
+    opacity: 0;
+    transform:  translateY(0) scale(1);
+  }
+  25% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50vh) scale(0);
+  }
+}

@@ -1,0 +1,280 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="./swiper.min.css">
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+	<body>
+		<div class="page">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="swiper-box">
+							<div class="swiper-item">
+								<img class="item-img item-img1" src="./deer.jpg" />
+								<input oninput="inputChange(0)" class="item-blur" type="range" min="0" max="20" value="0" step="1" />
+								<span class="blur-text">模糊blur(0)</span>
+							</div>
+							<div class="swiper-item">
+								<img class="item-img item-img2" src="./deer.jpg" />
+								<input oninput="inputChange(1)" class="item-grayscale" type="range" min="0" max="1" value="0" step="0.1" />
+								<span class="grayscale-text">灰度grayscale(0)</span>
+							</div>
+							<div class="swiper-item">
+								<img class="item-img item-img3" src="./deer.jpg" />
+								<input oninput="inputChange(2)" class="item-sepia" type="range" min="0" max="1" value="0" step="0.1" />
+								<span class="sepia-text">褐色sepia(0)</span>
+							</div>
+							<div class="swiper-item">
+								<img class="item-img item-img4" src="./deer.jpg" />
+								<input oninput="inputChange(3)" class="item-brightness" type="range" min="0" max="10" value="1" step="1" />
+								<span class="brightness-text">亮度brightness(1)</span>
+							</div>
+							<div class="swiper-item">
+								<img class="item-img item-img5" src="./deer.jpg" />
+								<input oninput="inputChange(4)" class="item-contrast" type="range" min="0" max="2" value="1" step="0.1" />
+								<span class="contrast-text">对比度contrast(1)</span>
+							</div>
+							<div class="swiper-item">
+								<img class="item-img item-img6" src="./deer.jpg" />
+								<input oninput="inputChange(5)" class="item-huerotate" type="range" min="0" max="360" value="0" step="1" />
+								<span class="huerotate-text">色相旋转hue-rotate(0)</span>
+							</div>
+							<div class="swiper-item">
+								<img class="item-img item-img7" src="./deer.jpg" />
+								<input oninput="inputChange(6)" class="item-invert" type="range" min="0" max="1" value="0" step="0.1" />
+								<span class="invert-text">反相invert(0)</span>
+							</div>
+							<div class="swiper-item">
+								<img class="item-img item-img8" src="./deer.jpg" />
+								<input oninput="inputChange(7)" class="item-saturate" type="range" min="0" max="5" value="1" step="0.1" />
+								<span class="saturate-text">饱和度saturate(1)</span>
+							</div>
+							<div class="swiper-item">
+								<img class="item-img item-img9" src="./deer.jpg" />
+								<input oninput="inputChange(8)" class="item-opacity" type="range" min="0" max="1" value="1" step="0.1" />
+								<span class="opacity-text">透明度opacity(1)</span>
+							</div>
+							<div class="swiper-item">
+								<img class="item-img item-img10" src="./deer.jpg" />
+								<input oninput="inputChange(9)" class="item-dropshadow" type="range" min="-50" max="50" value="0" step="1" />
+								<span class="dropshadow-text">投影drop-shadow(0)</span>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="swiper-box">
+							<div class="swiper2-item">
+								<div class="background-blend exchange"></div>
+								<input class="a" onchange="checkChange(0)" type="checkbox">exchange</input>
+								<div class="radio-input">
+									<label><input onchange="blend1Change('normal')" name="blend1" type="radio" value="normal" selected="">正常(Normal)模式</label>
+									<label><input onchange="blend1Change('darken')" name="blend1" type="radio" value="darken">变暗(Darken)模式</label>
+									<label><input onchange="blend1Change('lighten')" name="blend1" type="radio" value="lighten">变亮(Lighten)模式</label>
+									<label><input onchange="blend1Change('multiply')" name="blend1" type="radio" value="multiply">正片叠底(Multiply)模式</label>
+									<label><input onchange="blend1Change('screen')" name="blend1" type="radio" value="screen">滤色(Screen)模式</label>
+									<label><input onchange="blend1Change('color-dodge')" name="blend1" type="radio" value="color-dodge">颜色减淡(Color
+										Dodge)模式</label>
+									<label><input onchange="blend1Change('color-burn')" name="blend1" type="radio" value="color-burn">颜色加深(Color
+										Burn)模式</label>
+									<label><input onchange="blend1Change('overlay')" name="blend1" type="radio" value="overlay">叠加(Overlay)模式</label>
+									<label><input onchange="blend1Change('hard-light')" name="blend1" type="radio" value="hard-light">强光(Hard
+										Light)模式</label>
+									<label><input onchange="blend1Change('soft-light')" name="blend1" type="radio" value="soft-light">柔光(Soft
+										Light)模式</label>
+									<label><input onchange="blend1Change('difference')" name="blend1" type="radio" value="difference">差值(Difference)模式</label>
+									<label><input onchange="blend1Change('exclusion')" name="blend1" type="radio" value="exclusion">排除(Exclusion)模式</label>
+									<label><input onchange="blend1Change('hue')" name="blend1" type="radio" value="hue">色相(Hue)模式</label>
+									<label><input onchange="blend1Change('saturation')" name="blend1" type="radio" value="saturation">饱和度(Saturation)模式</label>
+									<label><input onchange="blend1Change('color')" name="blend1" type="radio" value="color">颜色(Color)模式</label>
+									<label><input onchange="blend1Change('luminosity')" name="blend1" type="radio" value="luminosity">亮度(Luminosity)模式</label>
+								</div>
+							</div>
+							<div class="swiper2-item">
+								<div class="mix-blend exchange">
+									<img class="bg" alt="bg" src="bg.png" style="mix-blend-mode: normal;">
+									<img class="deer" alt="deer" src="deer.jpg" style="mix-blend-mode: normal;">
+								</div>
+								<input class="a" onchange="checkChange(1)" type="checkbox">exchange</input>
+								<div class="radio-input">
+									<label><input onchange="blend2Change('normal')" name="blend1" type="radio" value="normal" selected="">正常(Normal)模式</label>
+									<label><input onchange="blend2Change('darken')" name="blend1" type="radio" value="darken">变暗(Darken)模式</label>
+									<label><input onchange="blend2Change('lighten')" name="blend1" type="radio" value="lighten">变亮(Lighten)模式</label>
+									<label><input onchange="blend2Change('multiply')" name="blend1" type="radio" value="multiply">正片叠底(Multiply)模式</label>
+									<label><input onchange="blend2Change('screen')" name="blend1" type="radio" value="screen">滤色(Screen)模式</label>
+									<label><input onchange="blend2Change('color-dodge')" name="blend1" type="radio" value="color-dodge">颜色减淡(Color
+										Dodge)模式</label>
+									<label><input onchange="blend2Change('color-burn')" name="blend1" type="radio" value="color-burn">颜色加深(Color
+										Burn)模式</label>
+									<label><input onchange="blend2Change('overlay')" name="blend1" type="radio" value="overlay">叠加(Overlay)模式</label>
+									<label><input onchange="blend2Change('hard-light')" name="blend1" type="radio" value="hard-light">强光(Hard
+										Light)模式</label>
+									<label><input onchange="blend2Change('soft-light')" name="blend1" type="radio" value="soft-light">柔光(Soft
+										Light)模式</label>
+									<label><input onchange="blend2Change('difference')" name="blend1" type="radio" value="difference">差值(Difference)模式</label>
+									<label><input onchange="blend2Change('exclusion')" name="blend1" type="radio" value="exclusion">排除(Exclusion)模式</label>
+									<label><input onchange="blend2Change('hue')" name="blend1" type="radio" value="hue">色相(Hue)模式</label>
+									<label><input onchange="blend2Change('saturation')" name="blend1" type="radio" value="saturation">饱和度(Saturation)模式</label>
+									<label><input onchange="blend2Change('color')" name="blend1" type="radio" value="color">颜色(Color)模式</label>
+									<label><input onchange="blend2Change('luminosity')" name="blend1" type="radio" value="luminosity">亮度(Luminosity)模式</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="swiper-box">
+							<div class="swiper3-item">
+								<div class="swiper3-box1">
+									<img class="swiper3-img1" src="./deer.jpg" />
+								</div>
+							</div>
+							<div class="swiper3-item">
+								<div class="swiper3-box2">
+									<img class="swiper3-img2" src="./deer.jpg" />
+								</div>
+								<img class="swiper3-img22" src="./deer.jpg" />
+							</div>
+							<div class="swiper3-item">
+								<div class="swiper3-box3"></div>
+							</div>
+							<div class="swiper3-item">
+								<div class="swiper3-box4">
+									<img class="swiper3-img4" src="./deer.jpg" />
+								</div>
+							</div>
+							<div class="swiper3-item">
+								<div class="swiper3-box5">
+									<img class="swiper3-img5" src="./deer.jpg" />
+								</div>
+								<img class="swiper3-img55" src="./deer.jpg" />
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="swiper-box">
+							<img class="swiper4-img" src="./think.jpg" />
+							<div class="swiper4-box"></div>
+						</div>
+					</div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<script src="jscolor.js"></script>
+		<script src="swiper.min.js"></script>
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				direction: 'vertical',
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+					renderBullet: function(index, className) {
+						return '<span class="' + className + '">' + (index + 1) + '</span>';
+					},
+				},
+			});
+
+			function inputChange(no) {
+				let val = '';
+				switch (no) {
+					case 0:
+						val = document.getElementsByClassName('item-blur')[0].value;
+						document.getElementsByClassName('blur-text')[0].innerHTML = '模糊blur(' + val + ')';
+						document.getElementsByClassName('item-img1')[0].style.filter = 'blur(' + val + 'px)';
+						break;
+					case 1:
+						val = document.getElementsByClassName('item-grayscale')[0].value;
+						document.getElementsByClassName('grayscale-text')[0].innerHTML = '灰度grayscale(' + val + ')';
+						document.getElementsByClassName('item-img2')[0].style.filter = 'grayscale(' + val + ')';
+						break;
+					case 2:
+						val = document.getElementsByClassName('item-sepia')[0].value;
+						document.getElementsByClassName('sepia-text')[0].innerHTML = '褐色sepia(' + val + ')';
+						document.getElementsByClassName('item-img3')[0].style.filter = 'sepia(' + val + ')';
+						break;
+					case 3:
+						val = document.getElementsByClassName('item-brightness')[0].value;
+						document.getElementsByClassName('brightness-text')[0].innerHTML = '亮度brightness(' + val + ')';
+						document.getElementsByClassName('item-img4')[0].style.filter = 'brightness(' + val + ')';
+						break;
+					case 4:
+						val = document.getElementsByClassName('item-contrast')[0].value;
+						document.getElementsByClassName('contrast-text')[0].innerHTML = '对比度contrast(' + val + ')';
+						document.getElementsByClassName('item-img5')[0].style.filter = 'contrast(' + val + ')';
+						break;
+					case 5:
+						val = document.getElementsByClassName('item-huerotate')[0].value;
+						document.getElementsByClassName('huerotate-text')[0].innerHTML = '色相旋转hue-rotate(' + val + ')';
+						document.getElementsByClassName('item-img6')[0].style.filter = 'hue-rotate(' + val + 'deg)';
+						break;
+					case 6:
+						val = document.getElementsByClassName('item-invert')[0].value;
+						document.getElementsByClassName('invert-text')[0].innerHTML = '反相invert(' + val + ')';
+						document.getElementsByClassName('item-img7')[0].style.filter = 'invert(' + val + ')';
+						break;
+					case 7:
+						val = document.getElementsByClassName('item-saturate')[0].value;
+						document.getElementsByClassName('saturate-text')[0].innerHTML = '饱和度saturate(' + val + ')';
+						document.getElementsByClassName('item-img8')[0].style.filter = 'saturate(' + val + ')';
+						break;
+					case 8:
+						val = document.getElementsByClassName('item-opacity')[0].value;
+						document.getElementsByClassName('opacity-text')[0].innerHTML = '透明度opacity(' + val + ')';
+						document.getElementsByClassName('item-img9')[0].style.filter = 'opacity(' + val + ')';
+						break;
+					case 9:
+						val = document.getElementsByClassName('item-dropshadow')[0].value;
+						document.getElementsByClassName('dropshadow-text')[0].innerHTML = '投影drop-shadow(' + val + ')';
+						document.getElementsByClassName('item-img10')[0].style.filter = 'drop-shadow(' + val + 'px ' + val +
+							'px 6px black)';
+						break;
+				}
+			}
+
+			function checkChange(no) {
+				let classList = null;
+				switch (no) {
+					case 0:
+						classList = document.getElementsByClassName('background-blend')[0].classList;
+						if (classList.value.includes('exchange')) {
+							classList.remove("exchange");
+						} else {
+							classList.add("exchange");
+						}
+						break;
+					case 1:
+						let bgMode = document.getElementsByClassName('bg')[0].style.mixBlendMode;
+						let deerMode = document.getElementsByClassName('deer')[0].style.mixBlendMode;
+						document.getElementsByClassName('bg')[0].style.mixBlendMode = deerMode;
+						document.getElementsByClassName('deer')[0].style.mixBlendMode = bgMode;
+
+						classList = document.getElementsByClassName('mix-blend')[0].classList;
+						if (classList.value.includes('exchange')) {
+							classList.remove("exchange");
+						} else {
+							classList.add("exchange");
+						}
+						break;
+				}
+			}
+
+			function blend1Change(e) {
+				document.getElementsByClassName('background-blend')[0].style.backgroundBlendMode = e;
+			}
+
+			function blend2Change(e) {
+				let classList = document.getElementsByClassName('mix-blend')[0].classList;
+				if (classList.value.includes('exchange')) {
+					document.getElementsByClassName('bg')[0].style.mixBlendMode = "normal";
+					document.getElementsByClassName('deer')[0].style.mixBlendMode = e;
+				} else {
+					document.getElementsByClassName('deer')[0].style.mixBlendMode = "normal";
+					document.getElementsByClassName('bg')[0].style.mixBlendMode = e;
+				}
+			}
+		</script>
+	</body>
+</html>

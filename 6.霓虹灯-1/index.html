@@ -6,17 +6,52 @@
 	</head>
 	<body>
 		<div class="neon1">
-			<b>夜<span>上</span>海<span>会</span>所</b>
+			<b class="b-off">夜<span class="span1">上</span>海<span class="span2">会</span>所</b>
 		</div>
 		<div class="switch-area">
-			<label class="switch">
-				<input type="checkbox">
-				<span class="slider"></span>
-				<span class="center"></span>
-			</label>
+			<div class="btn1">
+				<span>框</span>
+				<input id="switch-input" type="checkbox" onchange="btn1Change()">
+				<label class="switch1" for="switch-input"></label>
+			</div>
+			<div class="btn2">
+				<span>字</span>
+				<label class="switch">
+					<input type="checkbox" onchange="btn2Change()">
+					<span class="slider"></span>
+					<span class="center"></span>
+				</label>
+			</div>
 		</div>
 		<!-- <div class="neon2">
 			<b>夜<span>上</span>海<span>会</span>所</b>
 		</div> -->
 	</body>
+	<script>
+		var neon1 = false;
+		var neon2 = false;
+		function btn1Change(){
+			if(!neon1){
+				document.getElementsByClassName('neon1')[0].classList.add("neon1-on");
+			}else{
+				document.getElementsByClassName('neon1')[0].classList.remove("neon1-on");
+			}
+			neon1 = !neon1;
+		}
+		function btn2Change(){
+			// console.log(document.getElementsByTagName('b')[0]);
+			if(!neon2){
+				document.getElementsByTagName('b')[0].classList.add("b-on");
+				document.getElementsByTagName('b')[0].classList.remove("b-off");
+				document.getElementsByClassName('span1')[0].classList.add("span1-on");
+				document.getElementsByClassName('span2')[0].classList.add("span2-on");
+			}else{
+				document.getElementsByTagName('b')[0].classList.add("b-off");
+				document.getElementsByTagName('b')[0].classList.remove("b-on");
+				document.getElementsByClassName('span1')[0].classList.remove("span1-on");
+				document.getElementsByClassName('span2')[0].classList.remove("span2-on");
+			}
+			neon2 = !neon2;
+		}
+	</script>
 </html>

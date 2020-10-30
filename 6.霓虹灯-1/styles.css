@@ -19,6 +19,7 @@ body {
 }
 
 .neon1 {
+	margin-bottom: 11vw;
 	text-align: center;
 	width: 45vw;
 	height: 10vw;
@@ -28,26 +29,50 @@ body {
 	align-items: center;
 	background-color: black;
 	box-shadow:
+		0 0 .5rem rgba(255, 255, 255, 0.1),
+		inset 0 0 .5rem rgba(255, 255, 255, 0.1),
+		0 0 2rem rgba(73, 208, 56, 0.1),
+		inset 0 0 2rem rgba(73, 208, 56, 0.1),
+		0 0 4rem rgba(73, 208, 56, 0.1),
+		inset 0 0 4rem rgba(73, 208, 56, 0.1);
+	
+}
+
+.neon1-on {
+	box-shadow:
 		0 0 .5rem #fff,
 		inset 0 0 .5rem #fff,
 		0 0 2rem #49D038,
 		inset 0 0 2rem #49D038,
 		0 0 4rem #49D038,
 		inset 0 0 4rem #49D038;
-	animation: blink-border 1s ease-in-out infinite 1s;
+	animation: blink-border 1s ease-in-out infinite 0.2s;
 }
 
 .neon1 b {
 	font: 400 7vw "Pacifico";
+}
+
+.b-off {
+	color: #2f1610;
+	text-shadow:
+		0 -40px 100px,
+		0 0 2px, 0 0 1em rgba(255, 68, 68, 0.1),
+		0 0 0.5em rgba(255, 68, 68, 0.1),
+		0 0 0.1em rgba(255, 68, 68, 0.1),
+		0 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+.b-on {
 	color: #ff4444;
 	text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
 }
 
-.neon1 b span {
+.span1-on {
 	animation: blink1 linear infinite 2s;
 }
 
-.neon1 b span:nth-of-type(2) {
+.span2-on {
 	animation: blink1 linear infinite 3s;
 }
 
@@ -192,7 +217,7 @@ body {
 	position: absolute;
 	bottom: 0;
 	width: 100vw;
-	height: 10vw;
+	height: 20vw;
 	display: flex;
 	align-items: center;
 }
@@ -201,7 +226,7 @@ body {
 	font-size: 1rem;
 	display: block;
 	position: relative;
-	margin: 2rem auto;
+	margin: 2vw auto;
 	width: 20vw;
 	height: 5vw;
 	border-radius: 5vw;
@@ -212,7 +237,7 @@ body {
 	box-shadow: 0 -2px white inset, 0 2px gray inset;
 }
 
-.switch>input {
+input {
 	display: none;
 }
 
@@ -345,4 +370,99 @@ body {
 	color: rgba(255, 0, 0, .3);
 	text-shadow: none;
 	transition: left .5s, color .5s, text-shadow .5s;
+}
+
+.btn1 {
+	font-size: 2vw;
+	color: white;
+	width: 50vw;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn2 {
+	font-size: 2vw;
+	color: white;
+	width: 50vw;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.switch1 {
+	margin: 2vw;
+	font-size: 1.8vw;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	width: 18vw;
+	height: 3vw;
+	border-radius: 5vw;
+	border: 1vw solid silver;
+	box-shadow: 1px 1px 2px #211 inset, 2px 2px 4px #322 inset, 3px 3px 6px #544 inset;
+	background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%) center/5px 5px, linear-gradient(90deg, red 50%, black 50%) -16.4vw /200% 100% no-repeat;
+	transition: background-position .5s;
+}
+
+input:checked~.switch1 {
+	background-position: -.8em;
+	transition: background-position .5s;
+}
+
+.switch1::before {
+	content: "";
+	display: block;
+	width: 2.6vw;
+	height: 2.6vw;
+	border-radius: 50%;
+	position: absolute;
+	top: calc(50% - 1.3vw);
+	left: 1%;
+	box-shadow:
+		1px 1px 1px #555,
+		2px 2px 1px #444,
+		3px 3px 1px #333,
+		5px 5px 10px black;
+	background-image:
+		radial-gradient(ellipse 8% 50% at 50% 0%,
+		hsla(0, 0%, 100%, .5) 0%,
+		hsla(0, 0%, 100%, 0) 100%),
+		radial-gradient(ellipse 12% 50% at 50% 100%,
+		hsla(0, 0%, 100%, .6) 0,
+		hsla(0, 0%, 100%, 0) 100%),
+		radial-gradient(ellipse 50% 7% at 0 50%,
+		hsla(0, 0%, 100%, .5) 0,
+		hsla(0, 0%, 100%, 0) 100%),
+		radial-gradient(ellipse 50% 5% at 100% 50%,
+		hsla(0, 0%, 100%, .5) 0,
+		hsla(0, 0%, 100%, 0) 100%),
+		repeating-radial-gradient(100% 100% at 50% 50%,
+		hsla(0, 0%, 0%, 0) 0%,
+		hsla(0, 0%, 0%, 0) 7%,
+		hsla(0, 0%, 0%, .1) 8.5%),
+		repeating-radial-gradient(100% 100% at 50% 50%,
+		hsla(0, 0%, 100%, 0) 0%,
+		hsla(0, 0%, 100%, 0) 15%,
+		hsla(0, 0%, 100%, .1) 18%),
+		repeating-radial-gradient(100% 100% at 50% 50%,
+		hsla(0, 0%, 100%, 0) 0%,
+		hsla(0, 0%, 100%, 0) 3%,
+		hsla(0, 0%, 100%, .2) 4%),
+		radial-gradient(200% 50% at 50% 50%,
+		hsla(0, 0%, 90%, 1) 5%,
+		hsla(0, 0%, 85%, 1) 30%,
+		hsla(0, 0%, 60%, 1) 100%);
+	transform: rotate(5deg);
+	transition: left .5s, transform .8s;
+}
+
+input:checked+.switch1::before {
+	left: calc(99% - 1.5em);
+	transform: rotate(15deg);
+	transition: left .5s, transform .8s;
 }

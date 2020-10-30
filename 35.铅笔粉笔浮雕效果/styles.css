@@ -1,0 +1,265 @@
+html {
+	font-size: 100px;
+	font-family: "Microsolf YaHei", sans-serif;
+	background: black;
+	text-align: center;
+}
+
+.page html body {
+	width: 100%;
+	height: 100%;
+}
+
+.jscolor {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+html,
+body {
+	position: relative;
+	height: 100%;
+}
+
+body {
+	background: #eee;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-pagination-bullet {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	font-size: 12px;
+	color: #000;
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+	color: #fff;
+	background: #007aff;
+}
+
+.swiper-box {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.swiper-item {
+	width: 20vw;
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.item-img {
+	width: 80%;
+	margin-bottom: 2vw;
+}
+
+.item-img10 {
+	filter: drop-shadow(0px 0px 6px black);
+}
+
+.swiper2-item {
+	width: 50vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.background-blend {
+	width: 25vw;
+	height: calc(25vw / 1025 * 954);
+	display: inline-block;
+	background-image: url(bg.png), url(deer.jpg);
+	background-size: 100% 100%;
+	margin-bottom: 2vw;
+}
+
+.background-blend.exchange {
+	background-image: url(deer.jpg), url(bg.png);
+}
+
+.mix-blend {
+	display: inline-block;
+	width: 25vw;
+	height: calc(25vw / 1025 * 954);
+	position: relative;
+	margin-bottom: 2vw;
+}
+
+.mix-blend>img {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+.mix-blend.exchange>img:last-child {
+	z-index: 3;
+}
+
+.mix-blend>img:last-child {
+	z-index: 1;
+}
+
+.radio-input {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	margin-top: 3vw;
+}
+
+.swiper3-item {
+	width: 33.3vw;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper3-box1 {
+	width: calc(33.3vw * 0.8);
+	height: calc(33.3vw * 0.8 / 1024 * 954);
+	background-image: url(deer.jpg);
+	background-size: 100% 100%;
+	filter: brightness(10) invert(1) grayscale(1);
+}
+
+.swiper3-img1 {
+	width: 100%;
+	margin-left: 1px;
+	margin-top: 1px;
+	mix-blend-mode: difference;
+}
+
+.swiper3-box2 {
+	position: relative;
+	width: calc(33.3vw * 0.8);
+	height: calc(33.3vw * 0.8 / 1024 * 954);
+	background-image: url(deer.jpg);
+	background-size: 100% 100%;
+	filter: brightness(10) invert(1) grayscale(1);
+}
+
+.swiper3-img2 {
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	width: 100%;
+	mix-blend-mode: difference;
+}
+
+.swiper3-img22 {
+	position: absolute;
+	width: calc(33.3vw * 0.8);
+	mix-blend-mode: color;
+}
+
+.swiper3-box3 {
+	width: calc(33.3vw * 0.8);
+	height: calc(33.3vw * 0.8 / 1024 * 954);
+	background-image: url(deer.jpg), url(deer.jpg), url(deer.jpg);
+	background-blend-mode: difference, screen;
+	background-size: 100% 100%;
+	background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px), center;
+	filter: brightness(2) invert(1) grayscale(1);
+}
+
+.swiper3-box4 {
+	width: calc(33.3vw * 0.8);
+	height: calc(33.3vw * 0.8 / 1024 * 954);
+	background-image: url(deer.jpg);
+	background-size: 100% 100%;
+	filter: brightness(10) grayscale(1);
+}
+
+.swiper3-img4 {
+	width: 100%;
+	margin-left: 1px;
+	margin-top: 1px;
+	mix-blend-mode: difference;
+}
+
+.swiper3-box5 {
+	position: relative;
+	width: calc(33.3vw * 0.8);
+	height: calc(33.3vw * 0.8 / 1024 * 954);
+	background-image: url(deer.jpg);
+	background-size: 100% 100%;
+	filter: brightness(10) grayscale(1);
+}
+
+.swiper3-img5 {
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	width: 100%;
+	mix-blend-mode: difference;
+}
+
+.swiper3-img55 {
+	position: absolute;
+	width: calc(33.3vw * 0.8);
+	mix-blend-mode: color;
+}
+
+.swiper4-img {
+	width: calc(50vw - 2px);
+	height: calc(50vw / 950 * 633);
+	border: 1px solid black;
+}
+
+.swiper4-box {
+	width: calc(50vw - 2px);
+	height: calc(50vw / 950 * 633);
+	background-image: url(think.jpg);
+	background-size: 100% 100%;
+	border: 1px solid black;
+}
