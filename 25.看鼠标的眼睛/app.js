@@ -3,6 +3,8 @@ var lEyeY = window.innerHeight * 40 / 100;
 var rEyeX = window.innerWidth / 2 + 50;
 var rEyeY = window.innerHeight * 40 / 100;
 $('body').on('mousemove', (e)=>{
+	//左眼睛
+	
 	// if(e.clientX < lEyeX){
 	// 	console.log('左');
 	// }else{

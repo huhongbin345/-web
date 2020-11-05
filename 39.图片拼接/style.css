@@ -1,0 +1,132 @@
+html,
+body,
+h1,
+p,
+div,
+a,
+ul,
+ol,
+input {
+	margin: 0px;
+	padding: 0px;
+}
+
+ul,
+ol {
+	list-style-type: none;
+}
+
+html {
+	font-size: 100px;
+	background-color: #C2AD92;
+	font-family: "Microsoft YaHei", sans-serif;
+	color: white;
+	text-align: center;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#container {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.piece {
+	position: absolute;
+	width: 5vw;
+	height: 5vw;
+	border-radius: 50%;
+	background-image: url(bg1.jpg);
+	box-shadow: 0 0 20px 6px rgba(0,0,0,.4);
+}
+
+.piece-row1 {
+	top: 0;
+	background-position-y: 0vw;
+}
+
+.piece-row2 {
+	top: 5vw;
+	background-position-y: -5vw;
+}
+
+.piece-row3 {
+	top: 10vw;
+	background-position-y: -10vw;
+}
+
+.piece-row4 {
+	top: 15vw;
+	background-position-y: -15vw;
+}
+
+.piece-row5 {
+	top: 20vw;
+	background-position-y: -20vw;
+}
+
+.piece-row6 {
+	top: 25vw;
+	background-position-y: -25vw;
+}
+
+.piece-row7 {
+	top: 30vw;
+	background-position-y: -30vw;
+}
+
+.piece-row8 {
+	top: 35vw;
+	background-position-y: -35vw;
+}
+
+.piece-col1 {
+	left: 0;
+	background-position-x: 0vw;
+}
+
+.piece-col2 {
+	left: 5vw;
+	background-position-x: -5vw;
+}
+
+.piece-col3 {
+	left: 10vw;
+	background-position-x: -10vw;
+}
+
+.piece-col4 {
+	left: 15vw;
+	background-position-x: -15vw;
+}
+
+.piece-col5 {
+	left: 20vw;
+	background-position-x: -20vw;
+}
+
+.piece-col6 {
+	left: 25vw;
+	background-position-x: -25vw;
+}
+
+.piece-col7 {
+	left: 30vw;
+	background-position-x: -30vw;
+}
+
+.piece-col8 {
+	left: 35vw;
+	background-position-x: -35vw;
+}
